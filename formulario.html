@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os melhores produtos</title>
+ <link rel="stylesheet" type="text/css" href=" formulario.css" media= "screen">
+ <title>cadastra-se</title>
 </head>
 <body>
     <div>
-    <h1> As melhores qualidades nos melhores preços </h1>
-    <p> é rapido e facil</p>
+    <h1 id= "titulo"> As melhores qualidades é aqui </h1>
+    <p id="Nos trazemos as melhores linhas até você "</p>
     <br>
 <form>
-    <fieldset>
-        <div>
-            <label>nome</label>
-            <input type=" text" name="nome" id=""   
+    <fieldset> class="grupo"
+        <div> class="campo">
+            <label for="nome" >nome</label>
+            <input type=" text" name="nome" id="nome" required>  
         </div>
         <div>
-            <label>sobrenome</label>
+            <label for="sobrenome"</label>
             <input type=" text" name="nome" id=""   
         </div>
         
-    </fieldset>
-    <div>
-        <label>Email</label>
+    <fieldset class="grupo">
+    <div> class= "campo">
+        <label for="Email"</label>
         <input type= "Email" name="Email" id="Email"></input>
-    </div>
+        <div>
+            <label for="wpp">Whatsapp</label>
+            <input type="number" name="wpp" id="wpp" required>
+        </div>
+    </div cla="campo">
     <label>qual a sua opção de compras?</label>
     <label>
     <input type="radio" name="shop" value="camisas"> camisas
@@ -36,32 +42,28 @@
         <label>
             <input type="radio" name="shop" value="acessórios"> acessórios 
             </label> 
-    <div>
-       
-    </div>
+    <div> class="campo">
+       </div class="campo">
 </form>
-<fieldset>
-    <div>
+<fieldset class="grupo">
+    <div class="campo">
         <label>email</label>
 <input type="text" "name" id="nome" required> 
 
-        <input type="email" name="email" id="email"
-    </div>
-    <div>
-        <label>Whatsapp</label>
-        <input type="number" name="wpp" id="wpp" required>
-    </div>
-    <div/>
+    
+    </div0 class="campo">
+    
+    <div/ class="campo">
     <label>masculino ou feminino</label>
     <select>
         <option selected disabled value="">selecione</option>
         <option>inverno</option>
         <option>verão</option>
     </select>
-</div>
-<fieldset>
-    </fieldset>
-    <div>
+</div class="campo">
+<fieldset class="grupo">
+    </fieldset class="grupo"> 
+    <div class="campo">
         <label>qual faixetaria você procura?</label> <br><br>
         <input type="checkbox" id="modelos" name="modelo 1" value="moda masculina">
             <label>Modas do verão</label>
@@ -69,12 +71,13 @@
             <label>Malhas esportivas</label>  
             <input type="checkbox" id="modelos" name="modelo 3" value="">
             <label>Modas do inverno</label>
-    </div> 
-</fieldset>
-<div>
+    </div class="campo">
+</fieldset class="grupo">
+<div class="campo">
     <br>
-    <label>Qual é a sua preferencia de roupa?</label>
+    <label for="Qual é a sua preferencia de roupa?"</label>
     <textarea rows="5" style="width: 70%;" id="preferencia" name="preferencia"></textarea>
-</div>
+    </div>
+    <button class ="botao" type="submit" onsubmit="">start</button>
 </body>
    </html> 
