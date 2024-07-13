@@ -1,20 +1,135 @@
-<header>
-    <nav>
-        <a href="comprar.html">comprar</a>
-    <a href="vender.html" >vender</a>
-    </nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Estilos CSS para o cabeçalho e navegação */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Estilos CSS para o carrossel */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            margin-bottom: 20px; /* Espaçamento inferior entre o carrossel e o conteúdo seguinte */
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button.left {
+            left: 10px;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+
+        .carousel-button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Site de Vendas</h1>
+        <nav>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="carros.html">Produtos</a></li>
+                <li class="nav-item"><a href="compras de carros.html">Sobre</a></li>
+                <li class="nav-item"><a href="formulario.html">Contato</a></li>
+                <li class="nav-item"><a href="vendas de carro.html">Loja</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="carousel">
-        <img src="imagem1.jpg" alt="Imagem 1">
-        <img src="imagem2.jpg" alt="Imagem 2">
-        <img src="imagem3.jpg" alt="Imagem 3">
+        <img src="beleza.jpg" alt="Imagem 1">
+        <img src="cuidado.jpg" alt="Imagem 2">
+        <img src="kit.jpg" alt="Imagem 3">
         <!-- Adicione mais imagens aqui -->
     </div>
-    <div class="carousel-button" onclick="prevSlide()">Anterior</div>
-    <div class="carousel-button" onclick="nextSlide()">Próximo</div>
-    <body
+
+    <div class="carousel-button left" onclick="prevSlide()">Anterior</div>
+    <div class="carousel-button right" onclick="nextSlide()">Próximo</div>
+
+    <script>
+        // Funções para controlar o carrossel
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.transform = 'translateX(0)';
+                } else if (i < index) {
+                    slide.style.transform = `translateX(-100%)`;
+                } else {
+                    slide.style.transform = `translateX(100%)`;
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= slides.length) {
+                currentIndex = 0;
+            }
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = slides.length - 1;
+            }
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex); // Mostra o slide inicial ao carregar a página
+    </script>
+</body>
+</html>

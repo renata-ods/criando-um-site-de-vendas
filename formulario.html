@@ -3,81 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Os melhores produtos</title>
- <link rel="stylesheet" type="text/css" href=" formulario.css" media= "screen">
- <title>cadastra-se</title>
+    <link rel="stylesheet" href="formulario.css">
+    <title>Cadastro de Produtos</title>
 </head>
 <body>
-    <div>
-    <h1 id= "titulo"> As melhores qualidades é aqui </h1>
-    <p id="Nos trazemos as melhores linhas até você "</p>
-    <br>
-<form>
-    <fieldset> class="grupo"
-        <div> class="campo">
-            <label for="nome" >nome</label>
-            <input type=" text" name="nome" id="nome" required>  
-        </div>
-        <div>
-            <label for="sobrenome"</label>
-            <input type=" text" name="nome" id=""   
-        </div>
-        
-    <fieldset class="grupo">
-    <div> class= "campo">
-        <label for="Email"</label>
-        <input type= "Email" name="Email" id="Email"></input>
-        <div>
-            <label for="wpp">Whatsapp</label>
-            <input type="number" name="wpp" id="wpp" required>
-        </div>
-    </div cla="campo">
-    <label>qual a sua opção de compras?</label>
-    <label>
-    <input type="radio" name="shop" value="camisas"> camisas
-    </label>    
-    <label>
-        <input type="radio" name="shop" value="tênis"> tênis
-        </label> 
-        <label>
-            <input type="radio" name="shop" value="acessórios"> acessórios 
-            </label> 
-    <div> class="campo">
-       </div class="campo">
-</form>
-<fieldset class="grupo">
-    <div class="campo">
-        <label>email</label>
-<input type="text" "name" id="nome" required> 
+    <header>
+        <h1>Site de Vendas</h1>
+        <nav>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="carros.html">Produtos</a></li>
+                <li class="nav-item"><a href="compras de carros.html">Sobre</a></li>
+                <li class="nav-item"><a href="formulario.html">Contato</a></li>
+                <li class="nav-item"><a href="vendas de carro.html">Loja</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 id="titulo">As melhores qualidades estão aqui</h1>
+    <p>Nós trazemos as melhores linhas até você.</p>
+    
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>  
+            </div>
 
-    
-    </div0 class="campo">
-    
-    <div/ class="campo">
-    <label>masculino ou feminino</label>
-    <select>
-        <option selected disabled value="">selecione</option>
-        <option>inverno</option>
-        <option>verão</option>
-    </select>
-</div class="campo">
-<fieldset class="grupo">
-    </fieldset class="grupo"> 
-    <div class="campo">
-        <label>qual faixetaria você procura?</label> <br><br>
-        <input type="checkbox" id="modelos" name="modelo 1" value="moda masculina">
-            <label>Modas do verão</label>
-            <input type="checkbox" id="modelos" name="modelo 2" value="">
-            <label>Malhas esportivas</label>  
-            <input type="checkbox" id="modelos" name="modelo 3" value="">
-            <label>Modas do inverno</label>
-    </div class="campo">
-</fieldset class="grupo">
-<div class="campo">
-    <br>
-    <label for="Qual é a sua preferencia de roupa?"</label>
-    <textarea rows="5" style="width: 70%;" id="preferencia" name="preferencia"></textarea>
-    </div>
-    <button class ="botao" type="submit" onsubmit="">start</button>
+            <div class="campo">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" required>  
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="wpp">Whatsapp</label>
+                <input type="number" name="wpp" id="wpp" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label>Qual a sua opção de compras?</label><br>
+                <label>
+                    <input type="radio" name="shop" value="camisas"> Camisas
+                </label>    
+                <label>
+                    <input type="radio" name="shop" value="tênis"> Tênis
+                </label> 
+                <label>
+                    <input type="radio" name="shop" value="acessórios"> Acessórios 
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="sexo">Masculino ou Feminino</label>
+                <select id="sexo" name="sexo">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Qual faixetaria você procura?</label><br>
+                <input type="checkbox" id="modelo1" name="modelo1" value="moda masculina">
+                <label for="modelo1">Modas do Verão</label><br>
+
+                <input type="checkbox" id="modelo2" name="modelo2" value="malhas esportivas">
+                <label for="modelo2">Malhas Esportivas</label><br>
+
+                <input type="checkbox" id="modelo3" name="modelo3" value="modas do inverno">
+                <label for="modelo3">Modas do Inverno</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="preferencia">Qual é a sua preferência de roupa?</label><br><br>
+                <textarea rows="5" style="width: 100%;" id="preferencia" name="preferencia"></textarea>
+            </div>
+        </fieldset>
+
+        <button class="botao" type="submit">Enviar</button>
+    </form>
 </body>
-   </html> 
+</html>
